@@ -36,11 +36,14 @@ class MyApp extends StatelessWidget {
                   .apply(fontFamily: 'Poppins'),
             ),
       ),
-      home: LayoutType(
+      home: Builder(
+        builder: (context) => LayoutType(
           context: context,
           breakpoint: 496,
           info: DesktopSizeInfo(),
-          child: HomePage()),
+          child: HomePage(),
+        ),
+      ),
     );
   }
 }
